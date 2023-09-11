@@ -1,6 +1,8 @@
 package org.example;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,5 +22,9 @@ public class Main {
         }else {
             System.out.println("Das aktuelle Datum ist gleich dem festgelegten Datum.");
         }
+        long differenceInDays = ChronoUnit.DAYS.between(currentDate, futureDate);
+
+        System.out.println("Der Unterschied beträgt: " + differenceInDays + " Tage.");
     }
+
 }
